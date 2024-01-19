@@ -51,7 +51,7 @@ const Rightbar = () => {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="User
+              primary="
               What is a CI/CD pipeline?"
               secondary={
                 <>

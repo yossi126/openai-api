@@ -1,12 +1,11 @@
-import { Box, ThemeProvider, createTheme } from "@mui/material";
+import { useState } from "react";
+import { Box, ThemeProvider, createTheme, Stack } from "@mui/material";
 import Navbar from "../components/Navbar";
-import Stack from "@mui/material/Stack";
 import Sidebar from "../components/Sidebar";
 import ChatUI from "../components/ChatUI";
 import Rightbar from "../components/Rightbar";
-import { useState } from "react";
 
-function App() {
+const App = () => {
   const [mode, setMode] = useState("light");
 
   const darkTheme = createTheme({
@@ -26,11 +25,11 @@ function App() {
         <Stack direction="row" spacing={2} justifyContent="space-between">
           <Sidebar setMode={setMode} mode={mode} />
           <ChatUI />
-          <Rightbar />
+          {/* <Rightbar /> */}
         </Stack>
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

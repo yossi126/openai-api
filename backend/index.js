@@ -39,8 +39,8 @@ app.post("/chat", async (req, res) => {
 
 app.post("/test", async (req, res) => {
   const { message } = req.body;
-  const conversation = ["Human: " + message, "AI: "];
-  res.send(conversation);
+
+  res.send(message);
 });
 
 app.listen(port, () => {
